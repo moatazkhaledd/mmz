@@ -1,20 +1,24 @@
 --[[
 
-│تم تطوير وبرمجة السورس من قبل سونيك .
-│@uu_iv
+▇▇▇                                       ▇▇▇               
+▇▇        ▇                        ▇       ▇▇             
+▇▇          ▇ @UU_IV   ▇         ▇▇            
+▇▇             ▇             ▇             ▇▇        Dev : Mahmoud aboelmagd
+▇▇                ▇       ▇                ▇▇      
+▇▇                   ▇▇                    ▇▇     Source revor BY @UU_IV
 #-------------------------------------------------------------------
 ]]
 
 local function bassela(msg,MsgText)
 if msg.type ~= "pv" then
 if MsgText[1] == "زخرفه" then
-redis:setex(max..":basselNow:"..msg.sender_user_id_,500,true)
+redis:setex(dany..":basselNow:"..msg.sender_user_id_,500,true)
 sendMsg(msg.chat_id_,msg.id_,"| حسننا , الان يمكنك ارسال الاسم ولبعض الرموز المميزه اكتب رموز")    
 return false
 end
 
-if redis:get(max..":basselNow:"..msg.sender_user_id_) then
-redis:del(max..":basselNow:"..msg.sender_user_id_)
+if redis:get(dany..":basselNow:"..msg.sender_user_id_) then
+redis:del(dany..":basselNow:"..msg.sender_user_id_)
 if utf8.len(msg.text) > 300 then
 sendMsg(msg.chat_id_,msg.id_,"| لا يمكنك زخرفه اكثر من 20 حرف \n| ارسل امر زخرفه وحاول مجددا بحروف اقل")    
 return false
@@ -860,9 +864,9 @@ end
 end
 local function TextRes(msg)
 
-if msg.text and msg.type ~= "pv" and redis:get(max..":basselNow:"..msg.sender_user_id_) then
+if msg.text and msg.type ~= "pv" and redis:get(dany..":basselNow:"..msg.sender_user_id_) then
 Text = msg.text
-redis:del(max..":basselNow:"..msg.sender_user_id_)
+redis:del(dany..":basselNow:"..msg.sender_user_id_)
 if utf8.len(msg.text) > 300 then
 sendMsg(msg.chat_id_,msg.id_," لا يمكنك زخرفه اكثر من 300 حرف \n  ارسل امر زخرفه وحاول مجددا بحروف اقل")    
 return false
@@ -1706,17 +1710,17 @@ end
 end
 
 return {
-max = {
+dany = {
 "^(زخرفه)$"
  },
- imax = bassela,
- dmax = TextRes,
+ idany = bassela,
+ ddany = TextRes,
  }
  
  
 
 --[[
-███████▀ │max ﹏ @UU_IV
+███████▀ │DANY ﹏ @UU_IV
 │تم تطوير وبرمجة السورس من قبل سونيك .
 │@soonicxx
 #-------------------------------------------------------------------
