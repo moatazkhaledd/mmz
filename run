@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/usr/bin/env bash 
 
 
 --[[
@@ -32,7 +32,7 @@ echo -e "${GREEN}
 ----------------------------------------------------------------------${CNIL}"
 echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
 ${CNIL}";
-echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source revor 
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source DANY 
 ${CNIL}";
 exit;
 fi
@@ -42,7 +42,7 @@ if [ ! -f "./TG" ]; then
 echo -e "${RED}
 ¦
 ¦ CAUTION:${WHITB} Your Not Dwonload TG .
-¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source revor${CNIL} . \n
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source DANY${CNIL} . \n
 \n\n"
 chmod +x ./ins
 ./ins
@@ -65,16 +65,16 @@ sudo chmod +x ./TG
 
 if [ "$1" == "R" ] ; then
 while(true) do
-sudo killall -q ./TG
+killall -q ./TG
 sudo rm -fr ../.telegram-cli
-./TG -s ./inc/Run.lua --bot=$TOKEN
+./TG -s inc/Run.lua --bot=$TOKEN
 done
 else
 
-if ! screen -list | grep -q "FHAIWIH"; then
-screen -S FHAIWIH ./run R
+if ! screen -list | grep -q "DANY"; then
+screen -S DANY ./run R
 fi
-screen -X -S FHAIWIH kill
-screen -S FHAIWIH ./run R
+screen -S DANY -X kill
+screen -S DANY ./run R
 fi
 
