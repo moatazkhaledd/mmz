@@ -1214,8 +1214,8 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		}
 		ssssys = ali[math.random(#ali)]
 		if not redis:get("KLISH:ID") then
-		sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,' \n• USE 𖦹 '..UserNameID..' .\n• MSG 𖥳  '..msgs..' .\n• STA 𖦹 '..msg.TheRank..' .\n• iD 𖥳  '..msg.sender_user_id_..' .\n𖣤 ᴄʜ 𓄹𓄼 @UU_DANY .\n▿▿▿',dl_cb,nil)
-		else
+    sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,' \n𓁷⁦⁦ - 𝙣𝙖𝙢𝙚 †: '..Namei..' 𓀀.\n𓁷⁦⁦ - 𝙪𝙚𝙨 †: '..UserNameID..' 𓀀.\n𓁷 - 𝙢𝙨𝙜 † : '..msgs..' 𓀀.\n𓁷 - 𝙨𝙩𝙖 †: '..msg.TheRank..' 𓀀.\n𓁷 - 𝙞𝙙 †:  '..msg.sender_user_id_..' 𓀀.\n',dl_cb,nil)
+    else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
 		Text = Text:gsub('USERGET',UserNameID)
@@ -1229,8 +1229,8 @@ if redis:get(dany.."getidstatus"..msg.chat_id_) == "Photo" then
 		end
 	else
 		if not redis:get("KLISH:ID") then
-		sendMsg(msg.chat_id_,msg.id_,'•لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...! \n• USE 𖦹 '..UserNameID..' .\n• MSG 𖥳 '..msgs..' .\n• STA 𖦹 '..msg.TheRank..' .\n• iD 𖥳  '..msg.sender_user_id_..' .\n𖣤 ᴄʜ 𓄹𓄼 @UU_DANY .\n▿▿▿')
-		else
+    sendMsg(msg.chat_id_,msg.id_,'•لا يمكنني عرض صورتك لانك قمت بحظر البوت او انك لاتملك صوره في بروفيلك ...! \n𓁷⁦⁦ - 𝙣𝙖𝙢𝙚 †: '..Namei..' 𓀀.\n𓁷⁦⁦ - 𝙪𝙚𝙨 †: '..UserNameID..' 𓀀.\n𓁷 - 𝙢𝙨𝙜 † : '..msgs..' 𓀀.\n𓁷 - 𝙨𝙩𝙖 †: '..msg.TheRank..' 𓀀.\n𓁷 - 𝙞𝙙 †:  '..msg.sender_user_id_..' 𓀀.')
+    else
 		Text = redis:get("KLISH:ID")
 		Text = Text:gsub('IDGET',msg.sender_user_id_)
 		Text = Text:gsub('USERGET',UserNameID)
@@ -1256,8 +1256,8 @@ else
 		Text = Text:gsub('User_Points',nko)
 		sendMsg(msg.chat_id_,msg.id_,Flter_Markdown(Text))
 		else
-		sendMsg(msg.chat_id_,msg.id_,'•الايدي بالصوره معطل   \n• USE 𖦹'..UserNameID..' .\n• MSG 𖥳'..msgs..' .\n• STA 𖦹 '..msg.TheRank..' .\n• iD 𖥳  '..msg.sender_user_id_..' .\n𖣤 ᴄʜ 𓄹𓄼 @UU_DANY .')
-		end
+    sendMsg(msg.chat_id_,msg.id_,'•الايدي بالصوره معطل \n𓁷⁦⁦ - 𝙣𝙖𝙢𝙚 †: '..Namei..' 𓀀 .\n𓁷⁦⁦ - 𝙪𝙚𝙨 †:'..UserNameID..' 𓀀 .\n𓁷 - 𝙢𝙨𝙜 † : '..msgs..' 𓀀 .\n𓁷 - 𝙨𝙩𝙖 †:  '..msg.TheRank..' 𓀀 .\n𓁷 - 𝙞𝙙 †:   '..msg.sender_user_id_..' 𓀀 .')
+    end
 end
 
 end) 
@@ -1849,7 +1849,7 @@ end
 
 if (MsgText[1] ==  'تحديث السورس'  or MsgText[1] ==  'تحديث السورس 🔂' ) then
 if not msg.SudoBase then return "*│*هذا الامر يخص {المطور الاساسي} فقط  \n" end
-local GetVerison = https.request( 'https://raw.githubusercontent.com/devsonicx/danyfile/master/GetVersion.txt' ) or 0
+local GetVerison = https.request( 'https://raw.githubusercontent.com/moatazkhaledd/bodyfile/master/GetVersion.txt' ) or 0
 print(GetVerison.." > "..version)
 if GetVerison > version then
 UpdateSourceStart = true
@@ -1921,8 +1921,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n⋆اهلاً عزيزي المطور ايديك :\n\n⋆"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس" and msg.type == "pv" then
-local inline = {{{text="-قنآهہ‏‏ آلسـورس اضـغـط هـنـآ ",url="https://t.me/UU_DANY"}}}
-send_key(msg.sender_user_id_,'   [قناة سورس : دانـي](https://t.me/UU_DANY)' ,nil,inline,msg.id_)
+local inline = {{{text="-قنآهہ‏‏ آلسـورس اضـغـط هـنـآ ",url="https://t.me/SourceBatshiko"}}}
+send_key(msg.sender_user_id_,'   [قناة سورس : باتشيكو](https://t.me/SourceBatshiko)' ,nil,inline,msg.id_)
 return false
 end
 
@@ -2317,8 +2317,8 @@ end
 end 
 if MsgText[1] == "معلومات الكيبورد" or MsgText[1]=="/help" then
 return [[
-𓆩 اهلا بك في داني  𓆪
-⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆ 
+𓆩 اهلا بك في باتشيكو
+⋆  ━━━  𝙱𝙰𝚃𝚂𝙷𝙸𝙺𝙾  ━━━ ⋆ 
 مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
 1• الاحصائيات { لعرض عدد المجموعات، والمشتركين في البوت
  2• تفعيل التواصل{ لتفعيل التواصل عبر البوت خاص بك} 
@@ -2338,17 +2338,16 @@ return [[
 18• جلب نسخه احتياطيه { لعرض ملف المجموعات بوتك }
 19• تحديث السورس { لتحديث السورس خاص بوتك 
 20• الغاء { للغاء الامر الذي طلبته }
-⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆ 
+⋆  ━━━  𝙱𝙰𝚃𝚂𝙷𝙸𝙺𝙾  ━━━ ⋆ 
 ]]
 end
 
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
 return [[
-⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆
- [- The Source Developer ](https://t.me/UU_IV) 💌 .
- [- The Bot channel](https://t.me/UU_FUCK) 💌 .
- [- Install source](https://t.me/UU_DANY/7) 💌 .
-⋆  ━━━  𝖘𝖔𝖓𝖎𝖈  ━━━ ⋆
+⋆  ━━━  𝙱𝙰𝚃𝚂𝙷𝙸𝙺𝙾  ━━━ ⋆
+ [• 𝙱𝙾𝙳𝚈 ](https://t.me/MOOOOlllllll) 💌 .
+ [• 𝚂𝙾𝚄𝚁𝙲𝙴 𝙱𝙰𝚃𝚂𝙷𝙸𝙺𝙾](https://t.me/SourceBatshiko) 💌 .
+⋆  ━━━  𝙱𝙰𝚃𝚂𝙷𝙸𝙺𝙾  ━━━ ⋆
 ]]
 end
 
@@ -2745,9 +2744,8 @@ end
 if msg.text=="/start" then 
 
 if msg.SudoBase then
-local text = 'لوحه اوامرك يا مطوري '
+local text = local text = '⇽ مرحباً عزيـزي شكراً لك لاستخـدام سـورس باتشيكو \nانت المطـور الاساسّي هنا \n⋆ ⋆ ⋆ ⋆  ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆ ⋆\n\n⋆  تسـتطـيع‌‏ التحكـم بكل الاوامر المـوجوده‌‏ بالكيبـورد الخاص بالبوت\n ⋆ فقط اضغـط ع الامر الذي تريد تنفيـذه .‌‏'
 local keyboard = {
- {"معلومات الكيبورد"},
 {"ضع اسم للبوت","ضع صوره للترحيب"},
  {"تعطيل التواصل","تفعيل التواصل"},
 {"تعطيل البوت خدمي","تفعيل البوت خدمي","المطورين"},
@@ -3934,7 +3932,7 @@ return sendMsg(msg.chat_id_,msg.id_,dr[math.random(#dr)])
 elseif not msg.SudoUser and Text==" بوت" or Text == "بوت" then
 return 
 sendMsg(msg.chat_id_,msg.id_,nnn[math.random(#nnn)]) 
-elseif Text== "سونيك" or Text== "سوني" then return  sendMsg(msg.chat_id_,msg.id_,"[مطور سورس داني↯](https://t.me/UU_IV)")
+elseif Text== "بودي" or Text== "عبدالرحمن" then return  sendMsg(msg.chat_id_,msg.id_,"[مطور سورس باتشيكو↯](https://t.me/MOOOOlllllll)")
 elseif Text== "رفع غبي"  then return sendMsg(msg.chat_id_,msg.id_,"⋆أهلاً عزيزي\n⋆تم رفع الغبي بنجاح↯\n⋆تمت إضافته إلى قائمه الأغبياء\n☆")
 elseif Text== "تنزيل غبي"  then return sendMsg(msg.chat_id_,msg.id_,"⋆أهلاً عزيزي\n⋆تم تنزيل الغبي بنجاح↯\n⋆تمت الزاله من قائمه الأغبياء\n☆")
 elseif Text== "رفع كلب"  then return sendMsg(msg.chat_id_,msg.id_,"⋆أهلاً عزيزي\n⋆تم رفع الكلب بنجاح↯\n⋆تمت إضافته إلى قائمه الكلاب\n☆")
@@ -4023,28 +4021,28 @@ elseif Text:match(Bot_Name.."كيفك") then
   --=====================================
 elseif Text== "انا مين" or Text== "مين انا"  then
 if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"[انت مطوري الغالي ♕](https://t.me/UU_DANY) ")
+return sendMsg(msg.chat_id_,msg.id_,"[انت مطوري الغالي ♕](https://t.me/SourceBatshiko) ")
 elseif msg.Creator then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه  تاج راسي♔](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه  تاج راسي♔](https://t.me/SourceBatshiko)")
 elseif msg.Director then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت مدير المجموعه๑](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت مدير المجموعه๑](https://t.me/SourceBatshiko)")
 elseif msg.Admin then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت ادمن شد حيلك♘](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت ادمن شد حيلك♘](https://t.me/SourceBatshiko)")
 else 
-return sendMsg(msg.chat_id_,msg.id_,"[مجرد عضو هنا 𖦹](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[مجرد عضو هنا 𖦹](https://t.me/SourceBatshiko)")
 end 
 end 
 elseif Text== "مين ضافني" or Text== "منو ضافني"  then
 if msg.SudoUser then  
-return sendMsg(msg.chat_id_,msg.id_,"[انت مكانك كل مكان يا مطور♕](https://t.me/UU_DANY) ")
+return sendMsg(msg.chat_id_,msg.id_,"[انت مكانك كل مكان يا مطور♕](https://t.me/SourceBatshiko) ")
 elseif msg.Creator then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت منشئ المجموعه](https://t.me/SourceBatshiko)")
 elseif msg.Director then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/SourceBatshiko)")
 elseif msg.Admin then 
-return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/SourceBatshiko)")
 else 
-return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/UU_DANY)")
+return sendMsg(msg.chat_id_,msg.id_,"[انت دخلت عبر الرابط](https://t.me/SourceBatshiko)")
 end
 
 
